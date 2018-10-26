@@ -7,19 +7,19 @@ namespace MVC_Assignment2.Models.ExtensionMethod
 {
     public static class ExtensionMethod1
     {
-        public static DateTime ToAge(this DateTime dateTime)
+        public static int ToAge(this DateTime dateTime)
         {
-            var rightTime = DateTimeOffset.Now;
-            int produce;
+            var rightTime = DateTime.Now;
+            int age;
             int RY = rightTime.Year;
             int DY = dateTime.Year;
-            produce = RY - DY;
-
+            age = RY - DY;
+           
             //new DateTime(1990, 01, 01).ToAge();
             //new DateTime(1987, 05, 07).ToAge();
             //new DateTime(1975, 10, 10).ToAge();     
-            
-            return DateTime.TryParse(int, out produce);
+
+            return age;
 
         }
     }

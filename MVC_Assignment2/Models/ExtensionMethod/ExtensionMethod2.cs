@@ -9,7 +9,7 @@ namespace MVC_Assignment2.Models.ExtensionMethod
     {
         public static string ToDigitsOnly(this string str)
         {
-            int output;
+            return new string(str.ToArray().Where(p=>char.IsDigit(p)).ToArray());
             
         }
     }

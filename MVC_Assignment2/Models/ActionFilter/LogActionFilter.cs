@@ -16,6 +16,10 @@ namespace MVC_Assignment2.Models.ActionFilter
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
           bool isCrawler =  HttpContext.Current.Request.Browser.Crawler;
+            if (isCrawler)
+            {
+                filterContext.Result = new EmptyResult();
+            }
            
         }
 
